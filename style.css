@@ -1,3 +1,7 @@
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+}
 :root {
   --primary: rgb(
     173,
@@ -320,6 +324,7 @@ footer .social {
  footer .credit a {
 color: coral;
 font-weight: 700;
+width: 100%;
  }
 
 
@@ -430,7 +435,44 @@ font-weight: 700;
 
 /* Handphone */
 @media (max-width: 450px) {
-  html {
-    font-size: 55%; /* Ukuran font paling kecil untuk HP */
+   .about,
+  .menu1,
+  .contact {
+    padding: 5rem 2rem 2rem;
+  }
+
+  .about h2,
+  .menu1 h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .hero .content {
+    max-width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .hero .content h1 {
+    font-size: 2.5rem;
+    margin-top: 30%;
+  }
+
+  .hero .content p {
+    font-size: 1.3rem;
+  }
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row form,
+  .contact .row .map {
+    width: 100%;
+  }
+
+  .contact .row form {
+    padding: 2rem;
+  }
+  footer {
+    padding: 1rem;
   }
 }
+
