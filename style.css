@@ -1,5 +1,9 @@
 :root {
-  --primary: rgb(173, 173, 173); /* Variabel warna utama yang bisa dipanggil dengan var(--primary) */
+  --primary: rgb(
+    173,
+    173,
+    173
+  ); /* Variabel warna utama yang bisa dipanggil dengan var(--primary) */
   --bg: rgb(0, 0, 0); /* Variabel untuk latar belakang utama */
 }
 
@@ -14,12 +18,15 @@
   text-decoration: none; /* Menghilangkan garis bawah pada link */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Style dasar untuk body */
 body {
   font-family: "poppins", sans-serif; /* Font untuk seluruh body */
   background-color: var(--bg); /* Latar belakang dari variabel */
   color: rgb(255, 255, 255); /* Warna teks putih */
-  min-height: 10000px; /* Tinggi minimal body agar bisa di-scroll */
 }
 
 /* NAVBAR START */
@@ -76,6 +83,7 @@ body {
 
 .navbar .navbar-extra a {
   color: var(--primary); /* Warna ikon tambahan */
+ margin-right: 1rem;
 }
 
 .navbar .navbar-extra a:hover {
@@ -130,7 +138,11 @@ body {
 }
 
 .hero .content h1 span2 {
-  color: rgb(124, 170, 201); /* Warna teks span2 (tidak valid karena tag span2 tidak ada di HTML) */
+  color: rgb(
+    124,
+    170,
+    201
+  ); /* Warna teks span2 (tidak valid karena tag span2 tidak ada di HTML) */
 }
 
 .hero .content p {
@@ -177,7 +189,8 @@ body {
 .menu1 .row,
 .menu1 .row1,
 .menu1 .row2,
-.menu1 .row3 {
+.menu1 .row3,
+.menu1 .row4 {
   display: flex;
   margin-top: 4rem;
 }
@@ -186,7 +199,8 @@ body {
 .menu1 .row .imgmenu,
 .menu1 .row1 .imgmenu2,
 .menu1 .row2 .imgmenu3,
-.menu1 .row3 .imgmenu4 {
+.menu1 .row3 .imgmenu4,
+.menu1 .row4 .imgmenu5 {
   flex: 1 1 45rem; /* Ukuran fleksibel */
 }
 
@@ -194,10 +208,12 @@ body {
 .menu1 .row .imgmenu img,
 .menu1 .row1 .imgmenu2 img,
 .menu1 .row2 .imgmenu3 img,
-.menu1 .row3 .imgmenu4 img {
+.menu1 .row3 .imgmenu4 img,
+.menu1 .row4 .imgmenu5 img {
   width: 400px;
   margin-right: 3rem;
   text-align: center;
+  border-radius: 5%;
 }
 
 .contact p {
@@ -212,7 +228,8 @@ body {
 .menu1 .row .menu-card h3,
 .menu1 .row1 .fotocopy h3,
 .menu1 .row2 .jasaketik h3,
-.menu1 .row3 .alat h3 {
+.menu1 .row3 .alat h3,
+.menu1 .row4 .emas h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -221,7 +238,8 @@ body {
 .menu1 .row .menu-card p,
 .menu1 .row1 .fotocopy p,
 .menu1 .row2 .jasaketik p,
-.menu1 .row3 .alat p {
+.menu1 .row3 .alat p,
+.menu1 .row4 .emas p {
   margin-bottom: 0.8rem;
   font-size: 1.3rem;
   font-weight: 300;
@@ -273,6 +291,46 @@ body {
   background-color: slategrey;
 }
 
+/* FOOTER */
+footer {
+  background-color:darkcyan;
+  text-align: center;
+  padding: 1rem 0 5rem;
+  margin-top: 3rem;
+}
+
+footer .social {
+  padding: 1rem;
+}
+
+ footer .social a {
+  color: #eee;
+  margin: 1rem;
+   display: inline-flex;
+  align-items: center; /* Vertikal align antara ikon dan teks */
+  gap: 6px; /* Jarak antara ikon dan teks, bisa disesuaikan */
+  text-decoration: none;
+  color: inherit;
+ }
+
+ footer .social a:hover{
+  color: black;
+ }
+
+ footer .credit a {
+color: coral;
+font-weight: 700;
+ }
+
+
+
+
+
+
+
+
+
+
 /* MEDIA QUERY UNTUK RESPONSIVE */
 
 /* Laptop */
@@ -322,7 +380,8 @@ body {
   .menu1 .row,
   .menu1 .row1,
   .menu1 .row2,
-  .menu1 .row3 {
+  .menu1 .row3,
+  .menu1 .row4 {
     flex-wrap: wrap; /* Susun vertikal di layar kecil */
   }
 
@@ -330,7 +389,8 @@ body {
   .menu1 .row .imgmenu img,
   .menu1 .row1 .imgmenu2 img,
   .menu1 .row2 .imgmenu3 img,
-  .menu1 .row3 .imgmenu4 img {
+  .menu1 .row3 .imgmenu4 img,
+  .menu1 .row3 .imgmenu5 img {
     height: 24rem;
     object-fit: cover;
     object-position: center;
@@ -340,7 +400,8 @@ body {
   .menu1 .row2 .jasaketik h3,
   .menu1 .row1 .fotocopy h3,
   .menu1 .row .menu-card h3,
-  .menu1 .row3 .alat h3 {
+  .menu1 .row3 .alat h3,
+  .menu1 .row4 .emas h3 {
     margin-bottom: 1rem;
     font-size: 2rem;
   }
@@ -349,8 +410,21 @@ body {
   .menu1 .row2 .jasaketik p,
   .menu1 .row1 .fotocopy p,
   .menu1 .row .menu-card p,
-  .menu1 .row3 .alat p {
+  .menu1 .row3 .alat p,
+  .menu1 .row4 .emas p {
     font-size: 1.5rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
   }
 }
 
